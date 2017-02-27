@@ -3,7 +3,7 @@ require_once 'Ingredients.php';
 
 class Dish extends Ingredient
 {
-	public $name;
+	public $name='Dish';
 	protected $ingredients=array();
 	public function __construct()
 	{
@@ -25,7 +25,7 @@ class Dish extends Ingredient
 	}
 
 
-		public function set_name()
+		public function setName()
 	{
 		return $this->name = $name;
 	}
@@ -34,7 +34,7 @@ class Dish extends Ingredient
 
 $ingredients = [$potato, $chicken, $water, $salt];
 $soup = new Dish($ingredients);
-$soup->set_name('Суп');
+$soup->setName('Суп');
 var_dump($soup);
 
      $soup = $soup->total_cost();
@@ -42,7 +42,7 @@ var_dump($soup);
 
 $ingredients = [$potato, $chicken, $oil, $salt];
 $potato_chicken = new Dish($ingredients);
-$potato_chicken->set_name('Суп');
+$potato_chicken->setName('Картошка с мясом');
 var_dump($potato_chicken);
 
      $potato_chicken = $potato_chicken->total_cost();
