@@ -4,10 +4,10 @@ require_once ('Ingredients.php');
 class Dish extends Ingredient
 {
 	public $name='Dish';
-	protected $ingredients=array();
+	protected $ingredients;
 	public function __construct()
 	{
-		foreach ($this->ingredients as $ingredient) {
+		foreach ($ingredients as $ingredient) {
 			if ($ingredient instanceof Ingredient)
 		$this->ingredients[] = $ingredient;
 		}
