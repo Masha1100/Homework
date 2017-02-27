@@ -6,14 +6,14 @@ class Ingredient
 	public $cost;
 
 	
-	public function set_name()
+	public function set_name($name)
 	{
-		return $this->name;
+		return $this->name=$name;
 	}
 
-	public function get_cost()
+	public function get_cost($cost)
 	{
-		return $this->cost;
+		return $this->cost=$cost;
 	}
 }
 
