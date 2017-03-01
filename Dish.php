@@ -1,10 +1,9 @@
 <?php
-require_once ('Ingredients.php');
+require_once 'Ingredient.php';
 
-class Dish extends Ingredient
+class Dish
 {
-	public $name='Dish';
-	protected $ingredients;
+	protected $ingredients=array();
 	public function __construct()
 	{
 		foreach ($ingredients as $ingredient) {
@@ -15,19 +14,13 @@ class Dish extends Ingredient
 
 		
 
-	public function total_cost()
+	public function totalCost()
 	{
 		$total_cost = 0;
 		foreach($this->ingredients as $ingredient) {
-		$total_cost += $ingredient->get_cost();
+		$total_cost += $ingredient->setCost();
 	}
 		return $total_cost;
-	}
-
-
-		public function setName()
-	{
-		return $this->name = $name;
 	}
 
 }
