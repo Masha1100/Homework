@@ -11,21 +11,19 @@ class Ingredient
 		$this->cost = $cost;
 	}
 
-	public function get_name_ing()
+	public function getName()
 	{
 		return $this->ingredient;
 	}
 
-	public function get_cost()
+	public function getCost()
 	{
 		return $this->cost;
 	}
 
-	public function chandes_cost($cost)
+	public function setCost($cost)
 	{
 		$this->cost = $cost;
 		
 	}	
-
 }
-
